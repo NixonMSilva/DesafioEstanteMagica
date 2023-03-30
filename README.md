@@ -52,7 +52,7 @@ Run the migrations:
 docker-compose run app sh -c 'alembic upgrade head'
 ```    
 
-Open a web browser and navigate to http://localhost:8000/ to access the FastAPI application, or http://localhost:5050/ to access the pgAdmin4 interface.
+Open a web browser and navigate to http://localhost:8000/health-check to access the FastAPI application's status, or http://localhost:5050/ to access the pgAdmin4 interface.
 
 ## Usage
 
@@ -70,6 +70,15 @@ To interact with the API, you can use a tool like curl or a REST client like Ins
 pgAdmin4 is a web-based interface for managing PostgreSQL databases. To access the pgAdmin4 interface, open a web browser and navigate to http://localhost:5050/. Log in with the email and password specified in the .env file.
 
 From the pgAdmin4 interface, you can create, view, and modify database objects like tables, views, and indexes.
+
+In order to setup pgAdmin4 for usage, you need first to run the migrations, afterwars click on "Add New Server", there you'll be prompted to fill certain fields, it's recommended to use these settings:
+
+- General/Name: database
+- Connection/Host Name: postgresql
+- Connection/Port: 5432
+- Connection/Maintenance Database: As defined by the environment variable POSTGRES_DB
+- Connection/Username: As defined by the environment variable POSTGRES_USER
+- Connection/Password: As defined by the environment variable POSTGRES_PASSWORD
 
 ## During Development
 
