@@ -73,7 +73,7 @@ From the pgAdmin4 interface, you can create, view, and modify database objects l
 
 ## During Development
 
-<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language">
+<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language" stlye="width:50px">
 Bom, este foi um desafio interessante, tive que aprender como usar o FastAPI de modo relâmpago ao mesmo tempo que equilibrava meu horário com as aulas no período noturno,
 mas utilizei de vários recursos de aprendizado pela internet.
 
