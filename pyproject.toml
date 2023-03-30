@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "desafio-estante-magica"
+version = "0.1.0"
+description = ""
+authors = ["NixonMSilva"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.0"
+uvicorn = "^0.21.1"
+sqlalchemy = "^2.0.7"
+psycopg2-binary = "^2.9.5"
+pytest = "^7.2.2"
+alembic = "^1.10.2"
+python-decouple = "^3.8"
+httpx = "^0.23.3"
+python-multipart = "^0.0.6"
+multipart = "^0.2.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
