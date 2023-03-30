@@ -71,6 +71,18 @@ pgAdmin4 is a web-based interface for managing PostgreSQL databases. To access t
 
 From the pgAdmin4 interface, you can create, view, and modify database objects like tables, views, and indexes.
 
+## During Development
+
+<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language">
+Bom, este foi um desafio interessante, tive que aprender como usar o FastAPI de modo relâmpago ao mesmo tempo que equilibrava meu horário com as aulas no período noturno,
+mas utilizei de vários recursos de aprendizado pela internet.
+
+A parte principal da API não foi tão difícil de se fazer, os problemas maiores foram reservados na questão do armazenamento da imagem, preferi optar por armazená-la
+como dados binários no banco de dados enquanto não aprendo uma forma mais eficiente de trabalhar com arquivos no servidor utilizando esse framework.
+
+No demais, a parte da containerização e dos testes unitários foram de muito aprendizado para mim, sinto que essa é a primeira vez que trabalhei de fato com esses
+conceitos sem ter ninguém para segurar as minhas mãos e considero o resultado satisfatório, embora não tenha conseguido implementar um teste unitário final (está comentado)
+
 ## Contributing
 
 Contributions are welcome! If you find a bug or would like to suggest a new feature, please open an issue or submit a pull request.
