@@ -82,7 +82,7 @@ In order to setup pgAdmin4 for usage, you need first to run the migrations, afte
 
 ## During Development
 
-<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language" style="width:50px">
+<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language" style="width:32px">
 Bom, este foi um desafio interessante, tive que aprender como usar o FastAPI de modo relâmpago ao mesmo tempo que equilibrava meu horário com as aulas no período noturno,
 mas utilizei de vários recursos de aprendizado pela internet.
 
