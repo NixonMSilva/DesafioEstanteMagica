@@ -16,7 +16,7 @@ class Book(CustomBaseModel):
 
     @validator('magic_key')
     def validate_magic_key(cls, value):
-        if not re.match('^([A-Z]){6}', value):
+        if not re.match('^([A-Z]){6}$', value):
             raise ValueError('Invalid magic key')
         return value
 
