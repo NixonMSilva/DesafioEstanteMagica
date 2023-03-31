@@ -13,7 +13,6 @@ http://localhost:8000/book/add
 	"name": "Livro 1",
 	"author": "Autor 1",
 	"teacher": "Professor 1",
-	"magic_key": ""
 }
 
 Exemplo de JSON para cadastro de texto na rota
