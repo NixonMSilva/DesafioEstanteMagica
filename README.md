@@ -60,8 +60,8 @@ The FastAPI application provides a RESTful API for managing books. The API suppo
 
 - POST /book/add: Creates a new book in the database.
 - GET /book/list/{magic_key}: Returns a single book with the specified Magic Key.
-- POST /text/add: Creates a new text in the database.
-- POST /image/add: Creates a new image in the database.
+- POST /text/add: Creates a new text in the database, the id of the book the text refers to is passed via the body.
+- POST /image/add: Creates a new image in the database, the id of the book the image refers to is passed via the body.
 
 To interact with the API, you can use a tool like curl or a REST client like Insomnia or Postman.
 
@@ -82,7 +82,7 @@ In order to setup pgAdmin4 for usage, you need first to run the migrations, afte
 
 ## During Development
 
-<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language" style="width:50px">
+<img src="https://github.com/linuxmint/flags/blob/master/usr/share/iso-flag-png/br.png" alt="PT-BR language" style="width:32px">
 Bom, este foi um desafio interessante, tive que aprender como usar o FastAPI de modo relâmpago ao mesmo tempo que equilibrava meu horário com as aulas no período noturno,
 mas utilizei de vários recursos de aprendizado pela internet.
 
