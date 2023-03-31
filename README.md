@@ -32,11 +32,7 @@ git clone https://github.com/NixonMSilva/DesafioEstanteMagica
 cd DesafioEstanteMagica
 ```
 
-Create a .env file from the provided .env.example file:
-
-```bash
-cp .env.example .env
-```
+Create a .env file from the provided .env.example file,
 
 Edit the .env file and set the required environment variables.
 
