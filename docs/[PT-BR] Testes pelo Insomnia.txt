@@ -64,7 +64,7 @@ Exemplo de JSON esperado:
 	],
 	"images": [
 		{
-			"name": "agiota.jpg",
+			"name": "teste.png",
 			"data": <dados_binarios>
 		}
 }
