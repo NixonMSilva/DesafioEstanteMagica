@@ -1,4 +1,4 @@
-from app.schemas.book import Book
+from app.schemas.book import BookInput
 from app.routes.deps import get_db_session
 from app.service.book import BookServices
 
@@ -10,11 +10,11 @@ router = APIRouter(prefix='/book', tags=['Book'])
 
 @router.post('/add')
 def add_book(
-    book: Book,
+    book: BookInput,
     db_session: Session = Depends(get_db_session)
 ):
     service = BookServices(db_session=db_session)
-    service.add_book(book=book, should_generate_key=True)
+    service.add_book_input(book_input=book)
 
     return Response(status_code=status.HTTP_201_CREATED)
 

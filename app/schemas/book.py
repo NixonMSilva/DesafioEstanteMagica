@@ -20,6 +20,11 @@ class Book(CustomBaseModel):
             raise ValueError('Invalid magic key')
         return value
 
+class BookInput(CustomBaseModel):
+    name: str
+    author: str
+    teacher: str
+
 class BookOutput(CustomBaseModel):
     book: Book
     texts: List[Text]

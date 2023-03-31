@@ -2,7 +2,7 @@ import random
 import string
 
 from app.db.models import Book as BookModel
-from app.schemas.book import Book, BookOutput
+from app.schemas.book import Book, BookInput, BookOutput
 from app.service.text import TextServices
 from app.service.image import ImageServices
 from fastapi.exceptions import HTTPException
@@ -13,8 +13,17 @@ class BookServices:
     def __init__(self, db_session: Session):
         self.db_session = db_session
     
-    # Service for adding books
+    # Service for adding books via the router (BookInput instead of Book)
+    def add_book_input (self, book_input: BookInput):
+        book = Book(
+            name=book_input.name,
+            author=book_input.author,
+            teacher=book_input.teacher,
+            magic_key="PLACEH"
+        )
+        self.add_book(book=book, should_generate_key=True)
 
+    # Service for finally adding books
     def add_book(self, book: Book, should_generate_key: bool):
         book_model = BookModel(**book.dict())
 

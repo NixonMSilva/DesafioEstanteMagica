@@ -1,7 +1,7 @@
 import pytest
 
 from app.db.models import Book as BookModel
-from app.schemas.book import Book, BookOutput
+from app.schemas.book import Book, BookInput, BookOutput
 from app.service.book import BookServices
 
 from fastapi.exceptions import HTTPException
@@ -76,3 +76,27 @@ def test_search_book_by_magic_key(db_session, books_on_db):
 
     with pytest.raises(HTTPException):
         service.search_book_by_magic_key('KAMWFG')
+
+# This test tests the function of adding a book via a BookInput
+# schema used by the router 
+
+def test_add_book_input(db_session):
+    service = BookServices(db_session)
+
+    book_input = BookInput(
+        name = "O Pequeno Príncipe",
+        author = "Antoine de Saint-Exupéry",
+        teacher = "Maria de Sá",
+    )
+
+    service.add_book_input(book_input=book_input)
+
+    books_on_db = db_session.query(BookModel).all()
+    assert len(books_on_db) == 1
+    assert books_on_db[0].name == "O Pequeno Príncipe"
+    assert books_on_db[0].author == "Antoine de Saint-Exupéry"
+    assert books_on_db[0].teacher == "Maria de Sá"
+    # Magic key is not relevant for this test
+
+    db_session.delete(books_on_db[0])
+    db_session.commit()

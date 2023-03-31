@@ -1,0 +1,71 @@
+Segue abaixo alguns templates para testes do Insomnia
+
+É recomendado que se use o pgAdmin4 para consultar informações
+cadastradas como a chave mágica de um livro, uma vez que esta
+é gerada em runtime. E também a id armazenada no banco de dados
+para o cadastro de textos e imagens.
+
+Exemplo de JSON para cadastro de livro na rota 
+
+http://localhost:8000/book/add
+
+{
+	"name": "Livro 1",
+	"author": "Autor 1",
+	"teacher": "Professor 1",
+	"magic_key": ""
+}
+
+Exemplo de JSON para cadastro de texto na rota
+
+http://localhost:8000/text/add
+
+assumindo que book_id 1 seja válido
+
+{
+	"text": {
+            "text": "Lorem ipsum"
+   },
+   "book_id": 1
+}
+
+Exemplo de Multipart-form para cadastro de imagem na rota
+
+http://localhost:8000/image/add
+
+file: <algum arquivo>
+book_id: <id do livro a se cadastrar a imagem>
+
+Exemplo de consulta de livro por magic_key através da rota
+
+http://localhost:8000/book/list/<exemplo_magic_key>
+
+Exemplo de JSON esperado:
+
+{
+	"book": {
+		"name": "Livro 1",
+		"author": "Autor 1",
+		"teacher": "Professor 1",
+		"magic_key": "<exemplo_magic_key>"
+	},
+	"texts": [
+		{
+			"text": "Lorem ipsum"
+		},
+		{
+			"text": "dolor sit amet"
+		},
+		{
+			"text": "consectetur adipiscing elit"
+		},
+		{
+			"text": "Proin eu quam mauris"
+		}
+	],
+	"images": [
+		{
+			"name": "agiota.jpg",
+			"data": <dados_binarios>
+		}
+}

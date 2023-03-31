@@ -16,7 +16,6 @@ def test_add_book_route(db_session):
         "name": "O Pequeno Príncipe",
         "author": "Antoine de Saint-Exupéry",
         "teacher": "Maria de Sá",
-        "magic_key": "PLACEH"
     }
 
     response = client.post('/book/add', json=body)
